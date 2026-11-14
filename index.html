@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estação Meteorológica</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌦️ Estação Meteorológica</h1>
+        <p>Monitoramento das condições climáticas</p>
+        <a href="historico.html" class="botao-historico">
+             📋 Histórico de medições
+        </a>
+    </header>
+
+    <main class="container">
+
+        <h2>Dados meteorológicos</h2>
+
+        <section class="dados">
+
+            <div class="card">
+                <h3>🌡️ Temperatura</h3>
+                <p id="temperatura">-- °C</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 Umidade</h3>
+                <p id="umidade">-- %</p>
+            </div>
+
+            <div class="card">
+                <h3>🌬️ Pressão atmosférica</h3>
+                <p id="pressao">-- hPa</p>
+            </div>
+
+            <div class="card">
+                <h3>🌫️ Qualidade do ar</h3>
+                <p id="qualidade_ar">--</p>
+            </div>
+
+            <div class="card">
+                <h3>☀️ Luminosidade</h3>
+                <p id="luminosidade">-- lux</p>
+            </div>
+
+            <div class="card">
+                <h3>🌧️ Pluviometria</h3>
+                <p id="pluviometria">-- mm</p>
+            </div>
+
+        </section>
+
+        <section class="status">
+
+            <h3>Informações da estação</h3>
+
+            <p>
+                Conexão:
+                <span id="conexao">Aguardando servidor...</span>
+            </p>
+
+            <p>
+                Última atualização:
+                <span id="atualizacao">--</span>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto de Estação Meteorológica</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

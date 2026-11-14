@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="estacao.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2014"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="sqlite_sequence" custom_title="0" dock_id="1" table="4,15:mainsqlite_sequence"/><dock_state state="000000ff00000000fd00000001000000020000000000000000fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000012400ffffff000000000000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">CREATE TABLE estacao (
+    id_estacao INTEGER PRIMARY KEY AUTOINCREMENT,
+    latitude REAL NOT NULL,
+    longitude REAL NOT NULL
+);
+
+CREATE TABLE leitura (
+    id_leitura INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_estacao INTEGER NOT NULL,
+    temperatura REAL,
+    umidade REAL,
+    pressao REAL,
+    qualidade_ar INTEGER,
+    luminosidade INTEGER,
+    pluviometria REAL,
+    data_hora TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (id_estacao)
+    REFERENCES estacao(id_estacao)
+);
+
+INSERT INTO estacao (latitude, longitude)
+VALUES (-23.5505, -46.6333);
+
+SELECT * FROM estacao;</sql><current_tab id="0"/></tab_sql></sqlb_project>

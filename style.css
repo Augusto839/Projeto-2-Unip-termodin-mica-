@@ -1,0 +1,232 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f5fa;
+    color: #263445;
+}
+
+/* Cabeçalho */
+header {
+    background: #1976c9;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* Conteúdo principal */
+.container {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 15px;
+}
+
+h2 {
+    margin-bottom: 22px;
+    font-size: 23px;
+    color: #263445;
+}
+
+/* Cards dos sensores */
+.dados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px #00000010;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e5edf5;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px #00000018;
+}
+
+.card h3 {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.card p {
+    color: #1976c9;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+/* Informações da estação */
+.status {
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    line-height: 2;
+    box-shadow: 0 3px 12px #00000010;
+    border: 1px solid #e5edf5;
+}
+
+.status h3 {
+    margin-bottom: 10px;
+    color: #263445;
+}
+
+#conexao {
+    font-weight: bold;
+    color: #d97706;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+    .dados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celulares */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        margin: 20px auto;
+    }
+
+    .dados {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 23px 15px;
+    }
+
+    .card p {
+        font-size: 26px;
+    }
+}
+
+/* ============================= */
+/* PÁGINA DE HISTÓRICO */
+/* ============================= */
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.topo h2 {
+    color: #1976c9;
+}
+
+.voltar {
+    background-color: #1976c9;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    background-color: #125a98;
+}
+
+.informacoes {
+    background-color: white;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+#status {
+    margin-top: 8px;
+    color: #1976c9;
+}
+
+.tabela-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tabela-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+.tabela-container th,
+.tabela-container td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.tabela-container th {
+    background-color: #1976c9;
+    color: white;
+}
+
+.tabela-container tbody tr:hover {
+    background-color: #f0f6fc;
+}
+
+@media (max-width: 600px) {
+    .topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+.botao-historico {
+    display: inline-block;
+    background-color: #1976c9;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.botao-historico:hover {
+    background-color: #125a98;
+}

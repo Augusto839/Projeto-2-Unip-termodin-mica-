@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico - Estação Meteorológica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌦️ Estação Meteorológica</h1>
+        <p>Histórico de monitoramento climático</p>
+    </header>
+
+    <main class="container">
+
+        <div class="topo">
+            <h2>Histórico de medições</h2>
+            <a href="index.html" class="voltar">← Voltar ao início</a>
+        </div>
+
+        <section class="informacoes">
+            <p>Registros armazenados no banco de dados.</p>
+            <p id="status">Carregando histórico...</p>
+        </section>
+
+        <section class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data e hora</th>
+                        <th>Temperatura</th>
+                        <th>Umidade</th>
+                        <th>Pressão</th>
+                        <th>Qualidade do ar</th>
+                        <th>Luminosidade</th>
+                        <th>Pluviometria</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabela-historico">
+                    <tr>
+                        <td colspan="7">Carregando dados...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto de Estação Meteorológica</p>
+    </footer>
+
+    <script src="historico.js"></script>
+</body>
+</html>
