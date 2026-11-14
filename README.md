@@ -1,5 +1,9 @@
 # 🌦️ Estação Meteorológica
 
+## 🎥 Vídeo de demonstração
+
+[Assistir ao vídeo no YouTube](https://youtu.be/_8sZFWW9weA)
+
 Sistema de monitoramento meteorológico desenvolvido como projeto acadêmico do curso de Ciência da Computação da UNIP. O projeto integra um ESP32 programado em MicroPython, uma API desenvolvida em Python com Flask, um banco de dados SQLite e uma interface web para visualizar as medições.
 
 ## 📸 Imagem do projeto
